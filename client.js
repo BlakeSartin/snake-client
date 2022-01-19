@@ -7,18 +7,17 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    console.log("succesfully connected!")
+    console.log("succesfully connected!");
     conn.write("Name: BTS");
   });
 
   conn.on("data", (data) => {
-    console.log("received", data)
+    console.log("received", data);
   });
-
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
   return conn;
 };
-module.exports = connect
+module.exports = connect;
